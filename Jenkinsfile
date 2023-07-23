@@ -10,6 +10,7 @@ stages {
     }    
     stage('build') {
         steps {
+            sh 'export PATH="$PATH:/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin"'
             sh 'ls'
             sh 'java -version' 
             sh 'mvn --version'
