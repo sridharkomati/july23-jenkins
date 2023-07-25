@@ -1,7 +1,7 @@
 pipeline {
     tools {
         jdk 'JDK-8'
-        mvn 'mvn' 
+        mvn 'mvn-gol' 
     }
     agent { label 'JDK-8'}
     triggers { pollSCM('* * * * *') }
