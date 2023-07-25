@@ -14,7 +14,7 @@ stages {
     stage('build') {
         steps {
             sh 'ls'
-            sh 'java --version' 
+            sh 'java -version' 
             sh 'mvn --version'
             sh 'mvn package'
             
