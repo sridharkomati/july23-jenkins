@@ -8,6 +8,8 @@ pipeline {
     stages { 
         stage('Build Maven Project'){
                 steps{
+                    git branch: 'master',
+                        url: 'https://github.com/wakaleo/game-of-life.git'
                     rtMavenDeployer (
                         id: "maven-ID",
                         serverId: "JFROG",
@@ -34,7 +36,7 @@ pipeline {
         //     stage('vcs') {
         //         steps {
         //             git branch: 'master',
-        //                 url: 'https://github.com/sridharkomati/july23-jenkins.git'
+        //                 url: 'https://github.com/wakaleo/game-of-life.git'
         //         }
         //     }    
         //     stage('build') {
