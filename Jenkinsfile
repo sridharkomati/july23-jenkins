@@ -1,4 +1,7 @@
 pipeline {
+    tools {
+        jdk 'JDK-8'
+    }
     agent { label 'JDK-8'}
     triggers { pollSCM('* * * * *') }
 stages { 
@@ -10,7 +13,6 @@ stages {
     }    
     stage('build') {
         steps {
-            sh 'export PATH="/usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH"'
             sh 'ls'
             sh 'java --version' 
             sh 'mvn --version'
