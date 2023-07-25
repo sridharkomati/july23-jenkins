@@ -12,7 +12,7 @@ stages {
         steps {
             sh 'export PATH="/usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH"'
             sh 'ls'
-            sh 'java -version' 
+            sh 'java --version' 
             sh 'mvn --version'
             sh 'mvn package'
             
