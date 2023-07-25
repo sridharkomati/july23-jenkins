@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'openjdk-8'}
+    agent { label 'JDK-8'}
     triggers { pollSCM('* * * * *') }
 stages { 
     stage('vcs') {
